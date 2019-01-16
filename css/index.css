@@ -142,17 +142,39 @@ body {
 }
 .container {
   max-width: 880px;
-  margin: 0 auto;
+  margin: 2rem auto;
   font-family: 'Lato';
+  padding: 2rem;
+  border-right: 0.2rem dotted #4477b2;
+  border-left: 0.2rem dotted #4477b2;
   /* Nav Block */
   /* Basic Information Block */
   /* Skills Block */
   /* Work Experience Block */
+  /* Contact Form */
+}
+@media (max-width: 880px) {
+  .container {
+    margin: 0 2%;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    margin: 0 3%;
+  }
 }
 .container .nav {
   display: flex;
   justify-content: flex-end;
   margin: 2.4rem 0;
+}
+@media (max-width: 500px) {
+  .container .nav {
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
 }
 .container .nav a {
   text-decoration: none;
@@ -160,6 +182,12 @@ body {
   padding: 0 1rem;
   color: black;
   font-size: 1.2rem;
+}
+@media (max-width: 500px) {
+  .container .nav a {
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
 }
 .container .basic-information {
   font-size: 1.2rem;
@@ -170,6 +198,7 @@ body {
 .container .basic-information .name {
   font-family: 'Playfair Display';
   font-size: 2.7rem;
+  margin: 0.4rem 0;
 }
 .container .section-title {
   display: flex;
@@ -187,6 +216,15 @@ body {
 .container .skills strong {
   font-weight: bold;
 }
+.container .skills .skill-category {
+  margin: 0.4rem 0;
+}
+.container .work-history .work-history-entry {
+  margin: 2.4rem 0;
+}
+.container .work-history .work-history-entry .job {
+  margin: 2.4rem 0;
+}
 .container .work-history .work-history-entry .job .responsibilities {
   list-style-type: disc;
   list-style-position: inside;
@@ -203,7 +241,25 @@ body {
 .container .company {
   font-weight: bold;
   font-size: 1.4rem;
+  margin: 0.4rem 0;
 }
 .container .role {
   font-size: 1.2rem;
+  margin: 0.4rem 0;
+}
+.container .contact-form {
+  width: 25rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  background: #f1f1f1;
+  border-radius: 5px;
+  margin: 5rem auto;
+}
+.container .contact-form .contact-form .form-entry {
+  margin: 2rem 0;
+}
+.container .contact-form .contact-form .form-entry .form-entry textarea {
+  width: 3rem;
+  margin-top: 1rem;
 }
