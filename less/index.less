@@ -210,13 +210,34 @@ html, body {
 		font-size:  1.2rem;
 		.element-spacing;
 	}
+	
+
+}
+
+
+.container.contact {
+	max-width: 880px;
+	margin: 2rem auto;
+	font-family: @lo;
+	padding: 2rem;
+	border-right: .2rem dotted @pb;
+	border-left: .2rem dotted @pb;
+
+	@media (max-width: 880px) {
+		margin: 0 2%;
+	}
+
+	@media (max-width: 500px) {
+		margin: 0 3%;
+	}
 
 	/* Contact Form */
 
 	.contact-form {
+		align-self: center;
 		width: 25rem;
 		display: flex;
-		flex-wrap: wrap;
+		flex-direction: column;
 		padding: 2rem;
 		background: #f1f1f1;
 		border-radius: 5px;
@@ -233,21 +254,9 @@ html, body {
 
 		
 	}
-	
+
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
