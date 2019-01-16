@@ -49,13 +49,57 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+
+
+/** Variables **/
+
+/** Mixins**/
+
+.temporary-border() {
+	border: 2px solid black;
+	margin: 10px;
+}
+
+/** General Styles **/
 * {
     box-sizing: border-box;
 }
 
 html, body {
 	height: 100%;
-	background: @example
 }
 
-@example: #FF0000;
+.container {
+	max-width: 880px;
+	margin: 0 auto;
+}
+
+.nav {
+	display: flex;
+	justify-content: flex-end;
+	.temporary-border;
+}
+
+.basic-information {
+	.temporary-border;
+}
+
+.job {
+	.temporary-border;
+}
+
+.work-history-entry {
+	.temporary-border;
+}
+
+.skills {
+	.temporary-border;
+}
+
+.section-title {
+	.temporary-border;
+}
+
+.work-history {
+	.temporary-border;
+}

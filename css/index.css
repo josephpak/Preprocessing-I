@@ -127,11 +127,47 @@ table {
   border-spacing: 0;
 }
 /* Set every element's box-sizing to border-box */
+/** Variables **/
+/** Mixins**/
+/** General Styles **/
 * {
   box-sizing: border-box;
 }
 html,
 body {
   height: 100%;
-  background: #FF0000;
+}
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+}
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  border: 2px solid black;
+  margin: 10px;
+}
+.basic-information {
+  border: 2px solid black;
+  margin: 10px;
+}
+.job {
+  border: 2px solid black;
+  margin: 10px;
+}
+.work-history-entry {
+  border: 2px solid black;
+  margin: 10px;
+}
+.skills {
+  border: 2px solid black;
+  margin: 10px;
+}
+.section-title {
+  border: 2px solid black;
+  margin: 10px;
+}
+.work-history {
+  border: 2px solid black;
+  margin: 10px;
 }
