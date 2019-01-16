@@ -53,16 +53,40 @@ table {
 
 /** Variables **/
 
+@pf: 'Playfair Display';
+@lo: 'Lato';
+
 /** Mixins**/
 
-.temporary-border() {
-	border: 2px solid black;
-	margin: 10px;
+.center() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.spaced-out() {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.general-text() {
+	font-size: 1.2rem;
+	line-height: 1.3;
+	font-family: sans-serif;
+}
+
+.block-spacing() {
+	margin: 2.4rem 0;
 }
 
 /** General Styles **/
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
 }
 
 html, body {
@@ -72,34 +96,97 @@ html, body {
 .container {
 	max-width: 880px;
 	margin: 0 auto;
+	font-family: @lo;
+
+	/* Nav Block */
+
+	.nav {
+		display: flex;
+		justify-content: flex-end;
+		.block-spacing;
+	
+		a {
+			text-decoration: none;
+			font-family: sans-serif;
+			padding: 0 1rem;
+			color: black;
+			font-size: 1.2rem;
+		}
+	}
+
+	/* Basic Information Block */
+
+	.basic-information {
+		.general-text;
+		.block-spacing;
+
+		.name {
+			font-family: @pf;
+			font-size: 2.7rem;
+		}
+	}
+
+	/* Skills Block */
+
+	.section-title {
+		.center;
+		font-size: 1.8rem;
+		font-family: @pf;
+		.block-spacing;
+	}
+
+	.skills {
+		.general-text;
+
+		strong {
+			font-weight: bold;
+		}
+	}
+
+	/* Work Experience Block */
+
+	.work-history {
+	
+		.work-history-entry {
+
+			.job {
+
+				.responsibilities {
+					list-style-type: disc;
+					list-style-position: inside;
+					.general-text;
+				}
+			}
+		}	
+	}
+
+	.company, .role {
+		.spaced-out;
+	}
+
+	.company {
+		font-weight: bold;
+		font-size:  1.4rem;
+	}
+
+	.role {
+		font-size:  1.2rem;
+	}
+
 }
 
-.nav {
-	display: flex;
-	justify-content: flex-end;
-	.temporary-border;
-}
 
-.basic-information {
-	.temporary-border;
-}
 
-.job {
-	.temporary-border;
-}
 
-.work-history-entry {
-	.temporary-border;
-}
 
-.skills {
-	.temporary-border;
-}
 
-.section-title {
-	.temporary-border;
-}
 
-.work-history {
-	.temporary-border;
-}
+
+
+
+
+
+
+
+
+
