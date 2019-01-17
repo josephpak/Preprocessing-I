@@ -246,39 +246,52 @@ body {
   font-size: 1.2rem;
   margin: 0.4rem 0;
 }
-.container.contact {
+.contact {
   max-width: 880px;
   margin: 2rem auto;
   font-family: 'Lato';
   padding: 2rem;
   border-right: 0.2rem dotted #4477b2;
   border-left: 0.2rem dotted #4477b2;
-  /* Contact Form */
 }
 @media (max-width: 880px) {
-  .container.contact {
+  .contact {
     margin: 0 2%;
   }
 }
 @media (max-width: 500px) {
-  .container.contact {
+  .contact {
     margin: 0 3%;
   }
 }
-.container.contact .contact-form {
-  align-self: center;
-  width: 25rem;
+.contact .main-content {
+  margin: 10rem 0;
+  /* Contact Form */
+}
+.contact .main-content h1 {
+  font-family: 'Playfair Display';
+  font-size: 3.5rem;
+  margin: 0 4%;
+}
+.contact .main-content .contact-form {
+  width: 45rem;
+  height: 40rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   padding: 2rem;
   background: #f1f1f1;
   border-radius: 5px;
   margin: 5rem auto;
 }
-.container.contact .contact-form .contact-form .form-entry {
+.contact .main-content .contact-form .form-entry {
   margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.container.contact .contact-form .contact-form .form-entry .form-entry textarea {
-  width: 3rem;
-  margin-top: 1rem;
+.contact .main-content .contact-form .form-entry label {
+  font-size: 1.3rem;
+  margin: 1rem;
 }
